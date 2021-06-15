@@ -13,12 +13,16 @@
     --font-action: "Mulish", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .hamburguer {
     /* background-color: blue; */
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 150;
     /* posição na página (frente ou atrás da imagem) */
     right: 2rem;
     top: 2rem;
@@ -178,6 +182,7 @@ header {
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 100;
 }
 
 .show-menu .sidebar {
@@ -237,6 +242,12 @@ header {
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 6rem);
     row-gap: .5rem;
+    width: 100%;
+    /*incluido */
+    height: 70vh;
+    /*incluido */
+    margin-top: 8rem;
+    /*incluido */
 }
 
 .conhecimento:nth-child(1) {
@@ -277,6 +288,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .sessao-header h1 {
@@ -322,11 +334,14 @@ header {
 .projetos {
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+    margin-top: 7rem;
 }
 
 .card {
-    width: 18rem;
-    height: 25rem;
+    width: 20rem;
+    height: 30rem;
     position: relative;
 }
 
@@ -512,7 +527,7 @@ header {
 .orcamento-wrapper {
     width: 45%;
     height: 65%;
-    background-color: #ffffff99;
+    background-color: #ffffff85;
     border-radius: 10px;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
     position: relative;
@@ -552,10 +567,12 @@ header {
     font-family: var(--font-secundary);
     width: 4rem;
     font-size: 2rem;
-    outline: none;
+    outline: #555;
+    text-align: right;
     border-radius: 5px;
     border: none;
     padding: 0.3rem;
+    background-color: #67676720;
 }
 
 .btn-orcamento {
@@ -564,4 +581,52 @@ header {
     cursor: pointer;
     grid-column: 2;
     margin-top: 3rem;
+}
+
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p {
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a {
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul {
+    display: flex;
+}
+
+#link-topo {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 0 .1rem 0.6rem #00000009;
 }
